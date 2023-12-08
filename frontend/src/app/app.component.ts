@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { XComponent } from './components/x/x.component';
-import { YComponent } from './components/y/y.component';
+import { RestoComponent } from './components/resto/resto.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, XComponent, YComponent],
+  imports: [CommonModule, RouterOutlet, RouterLink, RestoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

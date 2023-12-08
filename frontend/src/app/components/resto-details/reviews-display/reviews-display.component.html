@@ -1,0 +1,25 @@
+<table>
+    <tr>
+      <th>Auteur</th>
+      <th>Commentaire</th>
+      <th>Nombre d'étoiles</th>
+      <th>Photo du plat</th>
+    </tr>
+    <tr *ngFor="let review of reviews">
+      <td>
+        {{review.name}}
+      </td>
+      <td>
+        {{review.comment}}
+      </td>
+      <td>
+        {{review.note}}
+      </td>
+      <td>
+        <img ngSrc="{{review.photo}}" alt="yes" width="100" height="100">
+      </td>
+      <td>
+          <button (click)="deleteReview(review)">Delete</button>
+      </td>
+    </tr>
+  </table>

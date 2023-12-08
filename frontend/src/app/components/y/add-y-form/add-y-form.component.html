@@ -1,9 +1,0 @@
-<form #addYForm="ngForm" (ngSubmit)="submit(addYForm)">
-  <div>
-    <input #titre="ngModel" type="text" name="titre" [(ngModel)]="formData.titre" [maxlength]="15" [required]="true"/>
-    <span *ngIf="titre.dirty && titre.errors?.['required']" appErrorDirective>Erreur lol</span>
-  </div>
-  <div>
-    <button type="submit">Submit</button>
-  </div>
-</form>

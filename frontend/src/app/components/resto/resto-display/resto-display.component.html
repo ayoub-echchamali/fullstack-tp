@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>Nom Restaurant</th>
+    <th>Addresse</th>
+    <th>Note moyenne</th>
+    <th>Détails</th>
+  </tr>
+  <tr *ngFor="let resto of restos">
+    <td>
+      {{resto.name}}
+    </td>
+    <td>
+      {{resto.address}}
+    </td>
+    <td>
+      {{resto.avgReview}}
+    </td>
+    <td>
+        <button (click)="viewDetails(resto)">Plus</button>
+    </td>
+  </tr>
+</table>

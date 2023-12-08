@@ -37,14 +37,6 @@ public class RestoDto {
     @JsonProperty("tag")
     private Tag tag;
 
-    // TODO: to dto
-    @JsonProperty("reviews")
-    private List<ReviewEntity> reviews;
-
-    // TODO: to dto
-    @JsonProperty("finalReview")
-    private FinalReviewEntity finalReview;
-
     public static RestoDto buildFromEntity(RestoEntity restoEntity) {
         return RestoDto.builder()
                 .id(restoEntity.getId())
@@ -53,8 +45,6 @@ public class RestoDto {
                 .avgReview(restoEntity.getAvgReview())
                 .photo(restoEntity.getPhoto())
                 .tag(restoEntity.getTag())
-                // TODO: map reviews and final review
                 .build();
     }
 }
-// .ad(restoEntity.getCommentaires() != null ? restoEntity.getCommentaires().stream().map(commentaireEntity -> CommentaireDto.buildFromEntity(commentaireEntity)).toList() : new ArrayList<>())

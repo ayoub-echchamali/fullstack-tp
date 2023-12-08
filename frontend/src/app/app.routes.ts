@@ -1,15 +1,12 @@
 import {Routes} from '@angular/router';
-import { XComponent } from './components/x/x.component';
-import { YComponent } from './components/y/y.component';
+import { RestoComponent } from './components/resto/resto.component';
+import { RestoDetailsComponent } from './components/resto-details/resto-details.component';
 
 export const routes: Routes = [
   {
-    path: '', redirectTo: 'X', pathMatch: "full"
+    path: '', component: RestoComponent
   },
   {
-    path: 'X', component: XComponent
-  },
-  {
-    path: 'Y', component: YComponent
+    path: 'restaurant/:id', component: RestoDetailsComponent
   }
 ];

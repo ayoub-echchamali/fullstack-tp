@@ -1,0 +1,56 @@
+<form #addYForm="ngForm" (ngSubmit)="submit(addYForm)">
+  <h2>Ajouter un beau restaurant: </h2>
+  <div>
+    <label>Nom du restaurant: </label>
+    <input #name="ngModel" type="text" name="name" [(ngModel)]="formData.name" [maxlength]="90" [required]="true"/>
+    <span *ngIf="name.dirty && name.errors?.['required']" appErrorDirective>Erreur lol</span>
+  </div>
+  <br>
+  <div>
+    <label>Addresse du restaurant: </label>
+    <input #address="ngModel" type="text" name="address" [(ngModel)]="formData.address" [maxlength]="255" [required]="true"/>
+    <span *ngIf="address.dirty && address.errors?.['required']" appErrorDirective>Erreur lol</span>
+  </div>
+  <br>
+  <div>
+    <label>Catégorie: </label>
+    <br>
+    <label>
+        <input type="radio" name="tag" [(ngModel)]="formData.tag" [value]="1" [required]="true" />
+        Gastronomique
+    </label>
+  </div>
+  <div>
+    <label>
+        <input type="radio" name="tag" [(ngModel)]="formData.tag" [value]="2" [required]="true" />
+        Bistrot
+    </label>
+  </div>
+  <div>
+    <label>
+        <input type="radio" name="tag" [(ngModel)]="formData.tag" [value]="3" [required]="true" />
+        Bistronomique
+    </label>
+  </div>
+  <div>
+    <label>
+        <input type="radio" name="tag" [(ngModel)]="formData.tag" [value]="3" [required]="true" />
+        Brasserie
+    </label>
+  </div>
+  <div>
+    <label>
+        <input type="radio" name="tag" [(ngModel)]="formData.tag" [value]="4" [required]="true" />
+        Fastfood
+    </label>
+  </div>
+  <div>
+    <label>
+        <input type="radio" name="tag" [(ngModel)]="formData.tag" [value]="0" [required]="true" />
+        Pas de catégorie
+    </label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
