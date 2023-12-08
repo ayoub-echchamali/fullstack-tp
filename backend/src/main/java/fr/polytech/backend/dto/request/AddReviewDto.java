@@ -1,4 +1,4 @@
-package fr.polytech.backend.dto.response;
+package fr.polytech.backend.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Max;
@@ -9,24 +9,21 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class BiblioDto {
+public class AddReviewDto {
 
-    @JsonProperty("id")
-    private Integer id;
+    @JsonProperty("name")
+    @Size(max = 50)
+    private String name;
 
-    @JsonProperty("nom")
-    @Size(max = 100)
-    private String nom;
+    @JsonProperty("comment")
+    @Size(max = 255)
+    private String comment;
 
-    @JsonProperty("livres")
-    private List<LivreDto> livres;
-
+    @JsonProperty("note")
     @Min(0)
     @Max(3)
     private Integer note;

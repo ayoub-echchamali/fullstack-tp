@@ -11,13 +11,17 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AddBiblioDto {
+public class AddRestoDto {
 
-    @JsonProperty("id")
-    private Integer id;
+    @JsonProperty("name")
+    @Size(max = 90)
+    private String name;
 
-    @JsonProperty("nom")
-    @Size(max = 3)
-    private String nom;
+    @JsonProperty("address")
+    @Size(max = 255)
+    private String address;
+
+    @JsonProperty("tag")
+    private Integer tag;
 
 }

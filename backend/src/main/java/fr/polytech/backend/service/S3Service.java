@@ -27,14 +27,14 @@ public class S3Service {
                 .build();
     }
 
-    public String getDownloadUrl(final String objectId) {
+    public String getDownloadUrlResto(final String objectId) {
         try {
             return this.client.getPresignedObjectUrl(
                     GetPresignedObjectUrlArgs
                             .builder()
                             .method(Method.GET)
                             .object(objectId)
-                            .bucket(environment.getProperty("s3.buckets.livres"))
+                            .bucket(environment.getProperty("s3.buckets.examillustrations"))
                             .build()
             );
         } catch (ErrorResponseException | InsufficientDataException | InternalException | InvalidKeyException |
@@ -44,14 +44,48 @@ public class S3Service {
         }
     }
 
-    public String putDownloadUrl(final String objectId) {
+    public String putDownloadUrlResto(final String objectId) {
         try {
             return this.client.getPresignedObjectUrl(
                     GetPresignedObjectUrlArgs
                             .builder()
                             .method(Method.PUT)
                             .object(objectId)
-                            .bucket(environment.getProperty("s3.buckets.livres"))
+                            .bucket(environment.getProperty("s3.buckets.examillustrations"))
+                            .build()
+            );
+        } catch (ErrorResponseException | InsufficientDataException | InternalException | InvalidKeyException |
+                 InvalidResponseException | IOException | NoSuchAlgorithmException | XmlParserException |
+                 ServerException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public String getDownloadUrlReview(final String objectId) {
+        try {
+            return this.client.getPresignedObjectUrl(
+                    GetPresignedObjectUrlArgs
+                            .builder()
+                            .method(Method.GET)
+                            .object(objectId)
+                            .bucket(environment.getProperty("s3.buckets.examphotos"))
+                            .build()
+            );
+        } catch (ErrorResponseException | InsufficientDataException | InternalException | InvalidKeyException |
+                 InvalidResponseException | IOException | NoSuchAlgorithmException | XmlParserException |
+                 ServerException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public String putDownloadUrlReview(final String objectId) {
+        try {
+            return this.client.getPresignedObjectUrl(
+                    GetPresignedObjectUrlArgs
+                            .builder()
+                            .method(Method.PUT)
+                            .object(objectId)
+                            .bucket(environment.getProperty("s3.buckets.examphotos"))
                             .build()
             );
         } catch (ErrorResponseException | InsufficientDataException | InternalException | InvalidKeyException |

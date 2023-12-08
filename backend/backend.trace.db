@@ -1,0 +1,16 @@
+2023-12-08 12:59:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]*  from REVIEWS WHERE id=2"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]*  from REVIEWS WHERE id=2"; expected "identifier"; SQL statement:
+DELETE *  from REVIEWS WHERE id=2 [42001-214]
+2023-12-08 12:59:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]*  from REVIEWS WHERE id=2"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]*  from REVIEWS WHERE id=2"; expected "identifier"; SQL statement:
+DELETE *  from REVIEWS WHERE id=2 [42001-214]
+2023-12-08 12:59:29 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]*  from REVIEWS WHERE id=2"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]*  from REVIEWS WHERE id=2"; expected "identifier"; SQL statement:
+DELETE *  from REVIEWS WHERE id=2 [42001-214]
+2023-12-08 12:59:35 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]*  from REVIEWS WHERE id==2"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]*  from REVIEWS WHERE id==2"; expected "identifier"; SQL statement:
+DELETE *  from REVIEWS WHERE id==2 [42001-214]
